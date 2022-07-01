@@ -56,6 +56,44 @@ The DB has one table `corpora` where all dataset instances are stored.
 
 (*) Relation IDs and names include `P0` (absence of relation; name: "no_relation") and `NA` (name: "unknown").
 
+## Preprocessing Details for Datasets
+
+### WebRED
+
+* Calculate rater confidence and assign P0 to the cases where it was low.
+* Separate into train and dev (90/10).
+
+### WikiFact
+
+* Delete instances where SUBJ and OBJ cover the same token(s).
+* Delete instances with properties which does not exist in Wikidata anymore (e.g., P5130, P134, P1432, P1962, P1773).
+
+### FewRel
+
+* Create detokenised sentences with MosesDetokenizer from `sacremoses`.
+
+### Wiki20m
+
+* Create detokenised sentences with MosesDetokenizer from `sacremoses`.
+* Don't include sentences that are present in FewRel.
+* Add sentences that are present in FewRel but have a different relation (66 instances).
+* Delete duplicate entries.
+
+### DocRED
+
+* Extract relations that have subject and object present in the same sentence.
+* Create detokenised sentences with MosesDetokenizer from `sacremoses`.
+* For DocRED-human: discard some examples, e.g., with missing subjects/objects, no evidence support (see [this issue](https://github.com/thunlp/DocRED/issues/19)).
+
+### T-REx
+
+* Take all the alignments where word boundaries for subject/object are present.
+* Delete duplicates among all the alignments for a text.
+
+### Other Remarks
+ 
+We do train/dev division only for WebRED, since it is human-annotated. We don't do it for T-REx. All other corpora provide a validation set.
+
 ## Other Datasets
 
 There exist other datasets that use Wikidata for RE. They were not included in the DB.

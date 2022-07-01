@@ -22,7 +22,7 @@ Datasets were preprocessed for **sentence-based** relation extraction.
 | our database (DB)                     | 47,390,557   | 1,022      | 66\%    | yes/no       | CC BY-SA 4.0 |
 
 
-* Some part of DocRED was verified by humans.
+\* Some part of DocRED was verified by humans.
 
 ## What's inside the DB?
 

@@ -1,4 +1,4 @@
-# Relation Extraction Database Wikidata
+# Relation Extraction Database Based on Wikidata
 
 This repository contains a lexical resource for English, sentence-level relation extraction (RE) based on Wikidata. The resource is distributed as an SQLite database for easy quering and storing. It includes more than 47 million examples collected from different corpora for RE, and it covers more than 1,000 unique Wikidata properties.
 
@@ -6,9 +6,11 @@ You can use, for example, this [DB browser](https://sqlitebrowser.org/) to read 
 
 ## Datasets
 
-Datasets were preprocessed for **sentence-based** relation extraction.
+Datasets were preprocessed for **sentence-based** relation extraction. 
 
-| dataset                               |# of instances|# of R types|# of neg.| human checks | license      |
+Negative examples are sentences with no relation detected or unknown relation between entities.
+
+| dataset                               |# of instances|# of R types|% of negative examples| human checks | license      |
 |---------------------------------------|--------------|------------|---------|--------------|--------------|
 | FewRel ([Han et al., 2018](https://aclanthology.org/D18-1514/))   | 56,000       | 80         | 0\%     | yes          | MIT          |
 | T-REx ([Elsahar et al., 2018](https://aclanthology.org/L18-1544/))   | 12,081,023   | 652        | 0\%     | no           | CC BY-SA 4.0 |
@@ -18,6 +20,8 @@ Datasets were preprocessed for **sentence-based** relation extraction.
 | WebRED ([Ormandi et al., 2021](https://arxiv.org/abs/2102.09681))      | 107,819      | 385        | 54\%    | yes          | CC BY 4.0    |
 | our database (DB)                     | 47,390,557   | 1,022      | 66\%    | yes/no       | CC BY-SA 4.0 |
 
+
+* Some part of DocRED was verified by humans.
 
 ## What's inside the DB?
 
@@ -58,3 +62,7 @@ There exist other datasets that use Wikidata for RE. They were not included in t
 
 * KELM/TEKGEN ([url](https://github.com/google-research-datasets/KELM-corpus), [paper](https://aclanthology.org/2021.naacl-main.278/))
 * REBEL ([url](https://github.com/Babelscape/rebel), [paper](https://aclanthology.org/2021.findings-emnlp.204/))
+
+## Citing
+
+If you use the database, please cite every used dataset.

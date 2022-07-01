@@ -8,16 +8,17 @@ You can use, for example, this [DB browser](https://sqlitebrowser.org/) to read 
 
 Datasets were preprocessed for **sentence-based** relation extraction. 
 
-Negative examples are sentences with no relation detected or unknown relation between entities.
+* \# of R types: how many unique Wikidata properties are in the dataset
+* Negative examples are sentences with no relation detected or with an unknown relation between entities.
 
-| dataset                               |# of instances|# of R types|% of negative examples| human checks | license      |
+| dataset                               |# of instances|# of R types|% of neg. examples| human checks | license      |
 |---------------------------------------|--------------|------------|---------|--------------|--------------|
-| FewRel ([Han et al., 2018](https://aclanthology.org/D18-1514/))   | 56,000       | 80         | 0\%     | yes          | MIT          |
-| T-REx ([Elsahar et al., 2018](https://aclanthology.org/L18-1544/))   | 12,081,023   | 652        | 0\%     | no           | CC BY-SA 4.0 |
-| DocRED ([Yao et al., 2019](https://aclanthology.org/P19-1074/))   | 778,914      | 96         | 0\%     | no (yes*)    | MIT          |
-| WikiFact ([Goodrich et al., 2019](https://dl.acm.org/doi/10.1145/3292500.3330955)) | 33,628,338   | 934        | 92\%    | no           | CC BY 4.0    |
-| Wiki20m ([Han et al., 2020](https://aclanthology.org/2020.aacl-main.75/))    | 738,463      | 81         | 60\%    | no           | MIT          |
-| WebRED ([Ormandi et al., 2021](https://arxiv.org/abs/2102.09681))      | 107,819      | 385        | 54\%    | yes          | CC BY 4.0    |
+| FewRel ([Han et al., 2018](https://aclanthology.org/D18-1514/)) [[data](https://github.com/thunlp/FewRel)]   | 56,000       | 80         | 0\%     | yes          | MIT          |
+| T-REx ([Elsahar et al., 2018](https://aclanthology.org/L18-1544/)) [[data](https://hadyelsahar.github.io/t-rex/downloads/)]   | 12,081,023   | 652        | 0\%     | no           | CC BY-SA 4.0 |
+| DocRED ([Yao et al., 2019](https://aclanthology.org/P19-1074/)) [[data](https://github.com/thunlp/DocRED)]  | 778,914      | 96         | 0\%     | no (yes*)    | MIT          |
+| WikiFact ([Goodrich et al., 2019](https://dl.acm.org/doi/10.1145/3292500.3330955)) [[data](https://github.com/google-research-datasets/wikifact/)] | 33,628,338   | 934        | 92\%    | no           | CC BY 4.0    |
+| Wiki20m ([Han et al., 2020](https://aclanthology.org/2020.aacl-main.75/)) [[data](https://github.com/thunlp/OpenNRE/blob/master/benchmark/download_wiki20m.sh)]| 738,463      | 81         | 60\%    | no           | MIT          |
+| WebRED ([Ormandi et al., 2021](https://arxiv.org/abs/2102.09681)) [[data](https://github.com/google-research-datasets/WebRED)]| 107,819      | 385        | 54\%    | yes          | CC BY 4.0    |
 | our database (DB)                     | 47,390,557   | 1,022      | 66\%    | yes/no       | CC BY-SA 4.0 |
 
 

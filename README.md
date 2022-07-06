@@ -4,6 +4,8 @@ This repository contains a lexical resource for English, sentence-level relation
 
 You can use, for example, this [DB browser](https://sqlitebrowser.org/) to read the database.
 
+The database can be downloaded from [osf.io](https://osf.io/nr3km/files/osfstorage/62c53de5d202a120875c99e5) (4.5 G).
+
 ## Datasets
 
 Datasets were preprocessed for **sentence-based** relation extraction. 
